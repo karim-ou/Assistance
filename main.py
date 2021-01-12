@@ -22,12 +22,17 @@ create talk function to give Alexa the ability to say whatever the text is
     engine.runAndWait()
 
 
+talk('please enter your name')
+name = input('Enter your name here: ')
+
+
 def take_command():
     """
 take the command from the user, and the command will be printed is alexa's in the command
     :return: the command
     """
     with sr.Microphone() as source:
+        talk(f'hello {name} what can i do for you')
         print('listening...')
         voice = listener.listen(source)
         command = listener.recognize_google(voice)
@@ -64,6 +69,9 @@ search i the command for keywords
     # if joke was in the command then the program will tell you a joke
     elif 'joke' in command:
         talk(pyjokes.get_joke())
+    elif 'good bay' in command:
+        talk(f'good bay {name}, happy to help')
+        quit()
     else:
         talk('please say the command again')
 
