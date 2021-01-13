@@ -69,8 +69,8 @@ search i the command for keywords
     # if joke was in the command then the program will tell you a joke
     elif 'joke' in command:
         talk(pyjokes.get_joke())
-    elif 'good bay' in command:
-        talk(f'good bay {name}, happy to help')
+    elif 'good bye' in command:
+        talk(f'good bye {name}, happy to help')
         quit()
     else:
         talk('please say the command again')
