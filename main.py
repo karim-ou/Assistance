@@ -72,6 +72,8 @@ search i the command for keywords
     elif 'good bye' in command:
         talk(f'good bye {name}, happy to help')
         quit()
+    elif 'stop' in command:
+        quit()
     else:
         talk('please say the command again')
 
